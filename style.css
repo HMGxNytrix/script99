@@ -1,0 +1,202 @@
+button {
+  background-color: rgb(0, 195, 255);   /* kolor tła */
+  color: #000000;             /* kolor tekstu */
+  border: 2px solid black;  /* ramka przycisku */
+  border-radius: 8px;       /* zaokrąglenie rogów */
+  padding: 8px 16px;        /* odstępy wewnątrz przycisku */
+  font-size: 16px;          /* rozmiar tekstu */
+  cursor: pointer;          /* zmiana kursora przy najechaniu */
+}
+
+/* Wyśrodkowanie całego kontenera logowania */
+.login-box {
+    background: #2f2f2f;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    margin: 40px auto; /* USTAWIA PACZKI JEDNA POD DRUGĄ */
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+
+/* Pola tekstowe */
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+
+  border: 2px solid #000000;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+
+/* Przycisk */
+.login-box button {
+  width: 95%;
+  margin-top: 15px;
+  padding: 12px;
+
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.login-box button:hover {
+  background-color: #005fcc;
+}
+.server-box {
+  border: 2px solid white;         /* ramka */
+  background: rgba(255, 255, 255, 0.2); /* lekko przezroczysta */
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-block;           /* ramka dopasowuje się do zawartości */
+  text-align: center;              /* wyśrodkowanie tekstu */
+  margin: 10px;                    /* odstęp od innych elementów */
+}
+
+.server-box select {
+  margin-top: 8px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: rgba(255,255,255,0.9);
+}
+footer {
+  position: fixed;         /* przyklejony do dołu ekranu */
+  bottom: 0;
+  left: 50%;               /* wyśrodkowanie poziome */
+  transform: translateX(-50%);
+
+  background: rgba(0, 0, 0, 0.5); /* półprzezroczyste tło */
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  text-align: center;      /* wyśrodkowanie tekstu wewnątrz */
+  display: flex;
+  flex-direction: column;  /* linki i tekst pod sobą */
+  gap: 5px;
+  backdrop-filter: blur(4px);
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  font-family: monospace;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  color: white;
+  font-size: 12px;
+  font-family: monospace;
+}
+.center-title {
+    text-align: center;
+}
+
+/* Pasek nawigacji przyklejony do góry */
+.nav-container {
+    background-color: #1e1e2f; /* ciemne tło */
+    padding: 15px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;   /* przyklejony do góry */
+    top: 0;
+    left: 0;
+    width: 100%;       /* zajmuje całą szerokość */
+    z-index: 9999;     /* zawsze nad resztą strony */
+}
+
+/* Lista głównych linków */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Pojedyncze linki */
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Efekt na hover */
+.nav-links li a:hover {
+    background-color: #3b3b5c;
+    color: #ffdd59;
+}
+
+/* Dropdown menu */
+.nav-links li.dropdown {
+    position: relative;
+}
+
+/* Ukryty dropdown */
+.dropdown-menu-header {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c2c44;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Pokazywanie dropdown na hover */
+.nav-links li.dropdown:hover .dropdown-menu-header {
+    display: block;
+    opacity: 1;
+}
+
+/* Linki w dropdown */
+.dropdown-menu-header li a {
+    display: block;
+    padding: 8px 15px;
+    color: #ffffff;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover na linkach dropdown */
+.dropdown-menu-header li a:hover {
+    background-color: #41416e;
+    color: #ffdd59;
+}
+
+/* Lekko zaokrąglone menu */
+.nav-links li.dropdown .dropdown-menu-header li {
+    border-bottom: 1px solid #3b3b5c;
+}
+
+.nav-links li.dropdown .dropdown-menu-header li:last-child {
+    border-bottom: none;
+}
+
+/* Dodatkowo dodaj padding-top dla reszty strony, żeby nie chowało treści pod menu */
+body {
+    padding-top: 65px; /* dopasuj do wysokości paska */
+}
